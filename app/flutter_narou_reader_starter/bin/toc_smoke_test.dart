@@ -3,7 +3,7 @@
 // ==============================================
 
 import 'package:logging/logging.dart';
-import 'package:narou_reader_starter/narou_toc_provider.dart' as narou;
+import 'package:narou_reader_starter/providers/narou_toc_provider.dart' as narou;
 
 Future<void> main(List<String> args) async {
   // 使い方:
@@ -16,7 +16,7 @@ Future<void> main(List<String> args) async {
   final maxPages = args.length >= 2 ? int.tryParse(args[1]) : null;
 
   // 観測ログ（FINE）も見えるようにデフォルトFINE
-  Logger.root.level = Level.FINE;
+  Logger.root.level = Level.INFO;
   Logger.root.onRecord.listen((r) {
     print('[${r.level.name}] ${r.time.toIso8601String()} ${r.loggerName} ${r.message}');
   });
