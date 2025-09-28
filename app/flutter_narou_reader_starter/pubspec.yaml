@@ -1,0 +1,26 @@
+name: narou_reader_starter
+description: Minimal Flutter starter for a Narou (syosetu) reader with bookshelf and offline-ready skeleton.
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  go_router: ^14.2.0
+  flutter_riverpod: ^2.5.1
+  shared_preferences: ^2.2.3
+  http: ^1.2.2
+  html: ^0.15.5
+  collection: ^1.18.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
