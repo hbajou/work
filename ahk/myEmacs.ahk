@@ -1,4 +1,4 @@
-﻿; AutoHotkey v2 script - Emacs-like keybinding
+; AutoHotkey v2 script - Emacs-like keybinding
 #Requires AutoHotkey v2.0
 
 ; --- Global variables ---
@@ -283,21 +283,10 @@ global gIsCtrlXPressed := false
     return
 }
 
-^f:: gIsCtrlXPressed ? find_file() : forward_char()
 ^d:: delete_char()
 ^h:: delete_backward_char()
 ^k:: kill_line()
-k:: gIsCtrlXPressed ? kill_buffer() : Send("k")
-^j:: newline_and_indent()
-^m:: newline()
-^i:: indent_for_tab_command()
-^r:: isearch_backward()
-^w:: kill_region()
-!w:: kill_ring_save()
-w:: gIsEscapePressed ? kill_ring_save() : Send("w")
 ^y:: yank()
-^/:: undo()
-^vk20:: gIsMarkDown := !gIsMarkDown
 ^a:: move_beginning_of_line()
 ^e:: move_end_of_line()
 ^p:: previous_line()
@@ -305,9 +294,4 @@ w:: gIsEscapePressed ? kill_ring_save() : Send("w")
 ^b:: backward_char()
 ^v:: scroll_down()
 !v:: scroll_up()
-v:: gIsEscapePressed ? scroll_up() : Send("v")
-!<:: pageup_top()
-<:: gIsEscapePressed ? pageup_top() : Send("<")
-!>:: pagedown_bottom()
->:: gIsEscapePressed ? pagedown_bottom() : Send(">")
 #HotIf
