@@ -1,2 +1,9 @@
 /src
 /devproxy
+
+# video tool artifacts
+/tools/__pycache__/
+/tools/_subtitle_temp/
+/tools/*.mp4
+/tools/*.srt
+/tools/*.wav
