@@ -107,6 +107,8 @@ def extract_audio(input_video: Path, output_audio: Path, ffmpeg_path: str | None
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         text=True,
+        encoding="utf-8",
+        errors="replace",
     )
 
 
@@ -195,6 +197,8 @@ def get_video_resolution(input_video: Path, ffmpeg_path: str | None = None) -> T
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         text=True,
+        encoding="utf-8",
+        errors="replace",
     )
     width_str, height_str = completed.stdout.strip().split(",")
     return int(width_str), int(height_str)
@@ -268,6 +272,8 @@ def build_speech_video(input_video: Path, output_video: Path, segments: List[Dic
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             text=True,
+            encoding="utf-8",
+            errors="replace",
         )
         clip_paths.append(clip_path)
 
@@ -306,6 +312,8 @@ def build_speech_video(input_video: Path, output_video: Path, segments: List[Dic
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         text=True,
+        encoding="utf-8",
+        errors="replace",
     )
 
 
@@ -325,6 +333,8 @@ def burn_subtitles(input_video: Path, output_video: Path, srt_path: Path, ffmpeg
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         text=True,
+        encoding="utf-8",
+        errors="replace",
     )
 
 
